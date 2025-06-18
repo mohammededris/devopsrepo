@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+</head>
+<body>
+    <h1>Enter Something</h1>
+    <form method="post">
+        <input type="text" name="text" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Previous Entries:</h2>
+    <ul>
+        {% for text, date in submissions %}
+        <li>{{ text }} (submitted at {{ date }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
